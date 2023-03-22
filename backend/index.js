@@ -62,17 +62,16 @@ app.post('/', async (req, res) => {
             // presence_penalty: 0.0,
         });
 
+        console.log(response.data.choices[0].text)
+        res.json({
+            // data: response.data
+            message: response.data.choices[0].text,
+        })
+
     } catch (error) {
 
         console.log(error);
     }
-
-
-    console.log(response.data.choices[0].text)
-    res.json({
-        // data: response.data
-        message: response.data.choices[0].text,
-    })
 });
 
 app.listen(port, () => {
