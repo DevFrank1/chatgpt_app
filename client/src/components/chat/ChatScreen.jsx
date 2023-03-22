@@ -44,7 +44,8 @@ const ChatScreen = () => {
         const response = await fetch('http://localhost:3010/', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer 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'
             },
             body: JSON.stringify({
                 message: messages,
