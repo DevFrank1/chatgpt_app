@@ -41,7 +41,7 @@ const ChatScreen = () => {
         // fetch response from api
 
         const messages = chatLogNew.map((message) => message.message).join('\n');
-        const response = await fetch('https://chatgpt-clone-y32k.onrender.com/', {
+        const response = await fetch('http://localhost:3010/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
